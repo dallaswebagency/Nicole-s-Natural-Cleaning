@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicole's Natural Cleaning | Natural House Cleaning in Spruce Grove & Edmonton</title>
+<meta name="description" content="Nicole's Natural Cleaning has served Spruce Grove and the Edmonton area since 2011, using natural products to keep families and pets safe from chemicals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4EFE3;
+  --paper:#FBF8F0;
+  --green:#2C4435;
+  --green-2:#3D5C49;
+  --sage:#B7C6AA;
+  --lemon:#E9C648;
+  --ink:#1E2922;
+  --muted:#5E6A61;
+  --line:rgba(30,41,34,.16);
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+em{font-style:italic}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--green-2);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem;transition:transform .2s,background .2s,color .2s;border:1.5px solid transparent}
+.btn-solid{background:var(--green);color:var(--paper)}
+.btn-solid:hover{background:var(--ink);transform:translateY(-2px)}
+.btn-line{border-color:var(--green);color:var(--green)}
+.btn-line:hover{background:var(--green);color:var(--paper)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(244,239,227,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:38px;height:38px;flex:none}
+.logo span{font-family:var(--serif);font-style:italic;font-size:1.32rem;color:var(--green);line-height:1}
+.logo small{display:block;font-family:var(--sans);font-style:normal;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.menu{display:flex;align-items:center;gap:30px;list-style:none}
+.menu a{text-decoration:none;font-size:.95rem;font-weight:500;position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--lemon);transition:width .25s}
+.menu a:not(.btn):hover::after{width:100%}
+.menu .btn{padding:10px 20px;color:var(--paper)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger i{display:block;height:2px;background:var(--ink);margin:6px 10px;transition:.25s}
+
+/* hero */
+.hero{padding:64px 0 96px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.7rem,5.6vw,4.9rem);margin:22px 0 24px;color:var(--green)}
+.hero h1 em{color:var(--green-2);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--lemon);z-index:-1;border-radius:4px}
+.lede{font-size:1.14rem;color:var(--muted);max-width:33em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 28px}
+.supplies{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;font-weight:600;color:var(--green)}
+.supplies i{width:9px;height:9px;border-radius:50%;background:var(--lemon);box-shadow:0 0 0 4px rgba(233,198,72,.28)}
+.collage{position:relative;height:590px}
+.c-main{position:absolute;right:0;top:0;width:78%;aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -28px rgba(30,41,34,.5)}
+.c-main img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.c-second{position:absolute;left:0;bottom:0;width:52%;aspect-ratio:4/3.3;border-radius:6px 44px 6px 44px;overflow:hidden;border:7px solid var(--cream);box-shadow:0 24px 50px -26px rgba(30,41,34,.55)}
+.c-second img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;right:-6px;bottom:38px;width:150px;height:150px;border-radius:50%;background:var(--lemon);display:grid;place-items:center;color:var(--ink)}
+.badge svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 26s linear infinite}
+.badge b{font-family:var(--serif);font-size:1.9rem;font-weight:600;line-height:1;text-align:center}
+.badge b small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-top:4px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* story */
+.story{background:var(--green);color:var(--paper);padding:110px 0 0;position:relative}
+.story-grid{display:grid;grid-template-columns:.34fr 1fr;gap:40px}
+.story .eyebrow{color:var(--sage)}
+.story-text{font-family:var(--serif);font-size:clamp(1.7rem,3.3vw,2.85rem);line-height:1.22;letter-spacing:-.01em}
+.story-text em{color:var(--lemon)}
+.story-text span{display:block;margin-top:26px;font-family:var(--sans);font-size:1.05rem;line-height:1.7;color:rgba(251,248,240,.74);max-width:36em}
+.story-img{margin-top:80px;position:relative;height:380px;overflow:hidden;border-radius:30px 30px 0 0}
+.story-img img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.story-img figcaption{position:absolute;left:28px;bottom:28px;background:var(--paper);color:var(--green);padding:12px 22px;border-radius:999px;font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:10px}
+.story-img figcaption i{width:9px;height:9px;border-radius:50%;background:var(--lemon);box-shadow:0 0 0 4px rgba(233,198,72,.4)}
+
+/* services */
+.services{padding:120px 0 110px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:54px}
+.sec-head h2{font-size:clamp(2.1rem,4.2vw,3.5rem);max-width:13em;margin-top:16px;color:var(--green)}
+.sec-head p{max-width:24em;color:var(--muted)}
+.svc-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+.svc-list{list-style:none;border-top:1px solid var(--line)}
+.svc-list li{display:grid;grid-template-columns:70px 1fr;padding:30px 0;border-bottom:1px solid var(--line);cursor:default;transition:padding .3s,background .3s}
+.svc-list li .n{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--green-2);padding-top:6px}
+.svc-list h3{font-size:clamp(1.6rem,2.7vw,2.3rem);transition:color .25s,transform .3s}
+.svc-list p{color:var(--muted);margin-top:6px}
+.svc-list li:hover h3,.svc-list li.on h3{color:var(--green-2);transform:translateX(8px)}
+.svc-list li.on .n{color:var(--ink)}
+.svc-photo{position:sticky;top:110px;aspect-ratio:1/1.08;overflow:hidden;border-radius:28px 100px 28px 100px;background:var(--sage)}
+.svc-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .6s,transform 1.2s}
+.svc-photo img.on{opacity:1;transform:scale(1)}
+
+/* deep clean */
+.deep{background:var(--paper);padding:110px 0;border-block:1px solid var(--line)}
+.deep-top{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end;margin-bottom:46px}
+.deep-top h2{font-size:clamp(2.1rem,4.2vw,3.5rem);margin-top:16px;color:var(--green)}
+.deep-top p{color:var(--muted);max-width:26em;justify-self:end}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.tab{font:600 .95rem var(--sans);padding:12px 22px;border-radius:999px;border:1.5px solid var(--line);background:transparent;cursor:pointer;color:var(--ink);transition:.2s}
+.tab:hover{border-color:var(--green)}
+.tab[aria-selected=true]{background:var(--green);color:var(--paper);border-color:var(--green)}
+.panel{display:none;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--cream);border-radius:28px;overflow:hidden;min-height:430px;animation:fade .5s}
+.panel.on{display:grid}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel figure{position:relative;min-height:320px}
+.panel figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel-body{padding:44px 48px}
+.panel-body h3{font-size:2rem;color:var(--green);margin-bottom:6px}
+.panel-body .sub{color:var(--muted);margin-bottom:22px}
+.ticks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.ticks li{position:relative;padding-left:30px;font-size:.98rem}
+.ticks li::before{content:"";position:absolute;left:0;top:.38em;width:16px;height:16px;border-radius:50%;background:var(--lemon) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.3l2.3 2.3 4.7-5' fill='none' stroke='%232C4435' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.ticks.one{grid-template-columns:1fr}
+.trash{margin-top:26px;padding-top:20px;border-top:1px dashed var(--line);font-size:.95rem;color:var(--muted)}
+
+/* move */
+.move{background:var(--green);color:var(--paper);padding:100px 0;position:relative;overflow:hidden}
+.move::before{content:"";position:absolute;right:-140px;top:-140px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(251,248,240,.16)}
+.move::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:1px solid rgba(251,248,240,.16)}
+.move-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center;position:relative;z-index:1}
+.move .eyebrow{color:var(--sage)}
+.move h2{font-size:clamp(2.2rem,4.4vw,3.8rem);margin:16px 0 22px}
+.move h2 em{color:var(--lemon)}
+.move .from{display:inline-flex;align-items:baseline;gap:12px;font-family:var(--serif);font-size:3.4rem;color:var(--lemon);line-height:1}
+.move .from small{font-family:var(--sans);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+.move-list{list-style:none;columns:2;column-gap:36px}
+.move-list li{break-inside:avoid;padding:15px 0;border-bottom:1px solid rgba(251,248,240,.18);font-size:1.02rem}
+.move-list li b{font-weight:600;color:var(--lemon);margin-right:6px}
+
+/* prices */
+.prices{padding:120px 0}
+.price-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.prices h2{font-size:clamp(2.1rem,4.2vw,3.5rem);margin:16px 0 24px;color:var(--green)}
+.notes{display:grid;gap:16px;color:var(--muted);font-size:.98rem}
+.notes p{padding-left:20px;border-left:3px solid var(--lemon)}
+.receipt{background:var(--paper);padding:44px 44px 54px;position:relative;transform:rotate(1.2deg);box-shadow:0 30px 60px -34px rgba(30,41,34,.45);
+  --z:12px;
+  -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/var(--z) 100%;
+  mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/var(--z) 100%;
+  padding-bottom:62px}
+.receipt h3{font-size:1.5rem;color:var(--green);text-align:center;margin-bottom:4px}
+.receipt .tag{text-align:center;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-bottom:22px;border-bottom:2px dashed var(--line);margin-bottom:6px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px dashed var(--line)}
+.row:last-of-type{border-bottom:0}
+.row .l b{display:block;font-weight:600;font-size:1.05rem}
+.row .l span{display:block;font-size:.88rem;color:var(--muted);margin-top:2px}
+.row .r{font-family:var(--serif);font-size:1.75rem;color:var(--green);white-space:nowrap;text-align:right;line-height:1.1}
+.row .r small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.row .r.two{font-size:1.45rem}
+
+/* agreement */
+.agree{background:var(--sage);padding:110px 0}
+.agree-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px}
+.agree h2{font-size:clamp(2rem,3.8vw,3.1rem);margin:16px 0 20px;color:var(--green)}
+.agree .eyebrow{color:var(--green)}
+.agree p.i{color:rgba(30,41,34,.78)}
+details{border-bottom:1px solid rgba(30,41,34,.25)}
+details:first-of-type{border-top:1px solid rgba(30,41,34,.25)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:24px 4px;font-family:var(--serif);font-size:1.5rem;color:var(--green)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-size:1.7rem;width:38px;height:38px;border-radius:50%;background:var(--paper);display:grid;place-items:center;transition:transform .3s,background .3s;flex:none}
+details[open] summary::after{transform:rotate(45deg);background:var(--lemon)}
+details p{padding:0 56px 26px 4px;color:rgba(30,41,34,.85)}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper);padding:110px 0 0;overflow:hidden}
+.contact-in{text-align:center}
+.contact .eyebrow{justify-content:center;color:var(--sage)}
+.contact h2{font-size:clamp(2.2rem,4.6vw,4rem);margin:18px auto 14px;max-width:14em}
+.contact h2 em{color:var(--lemon)}
+.contact .area{color:rgba(251,248,240,.7);max-width:30em;margin:0 auto}
+.phone{display:inline-block;margin:40px 0 18px;font-family:var(--serif);font-style:italic;font-size:clamp(2.8rem,9vw,7.4rem);line-height:1;color:var(--lemon);text-decoration:none;transition:transform .3s,color .3s}
+.phone:hover{color:var(--paper);transform:scale(1.02)}
+.contact .small{font-size:.92rem;color:rgba(251,248,240,.6)}
+footer{margin-top:90px;border-top:1px solid rgba(251,248,240,.16);padding:26px 0;font-size:.9rem;color:rgba(251,248,240,.66)}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--paper);text-decoration:underline;text-underline-offset:3px}
+footer a:hover{color:var(--lemon)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.badge svg{animation:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid,.svc-grid,.price-grid,.agree-grid,.move-grid,.story-grid,.deep-top{grid-template-columns:1fr;gap:44px}
+  .deep-top p{justify-self:start}
+  .collage{height:520px;max-width:560px}
+  .svc-photo{position:relative;top:0;aspect-ratio:4/3;order:-1}
+  .panel.on{grid-template-columns:1fr}
+  .panel figure{min-height:260px}
+  .receipt{transform:none}
+  .story-grid{gap:20px}
+}
+@media (max-width:820px){
+  .burger{display:block}
+  .menu{position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;padding:10px 20px 26px;gap:0;border-bottom:1px solid var(--line);display:none}
+  .menu.open{display:flex}
+  .menu li{width:100%;border-bottom:1px solid var(--line)}
+  .menu a{display:block;padding:16px 0}
+  .menu li:last-child{border:0;padding-top:16px}
+  .menu .btn{display:inline-flex;padding:14px 26px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .hero{padding:40px 0 70px}
+  .collage{height:440px}
+  .badge{width:118px;height:118px;bottom:20px}
+  .badge b{font-size:1.45rem}
+  .ticks{grid-template-columns:1fr}
+  .panel-body{padding:30px 24px}
+  .move-list{columns:1}
+  .receipt{padding:34px 24px 54px}
+  .row .r{font-size:1.45rem}
+  .svc-list li{grid-template-columns:48px 1fr}
+  details p{padding-right:4px}
+  summary{font-size:1.3rem}
+  .story,.services,.deep,.prices,.agree{padding-top:80px}
+  .deep,.prices,.agree,.move{padding-bottom:80px}
+  .story-img{height:280px;margin-top:56px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Nicole's Natural Cleaning, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2C4435"/><path d="M12 28c0-9 6-15 17-16-.5 10-6 16-15 16" fill="#E9C648"/><path d="M12 28c5-6 9-9 14-12" stroke="#2C4435" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+      <div><span>Nicole's Natural Cleaning</span><small>Since 2011</small></div>
+    </a>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+    <ul class="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#deep-clean">Deep Cleaning</a></li>
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#agreement">Agreement</a></li>
+      <li><a class="btn btn-solid" href="tel:+17802981650">(780) 298-1650</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <div class="eyebrow">Spruce Grove &amp; Edmonton areas</div>
+      <h1>Healthy living starts with a <em>naturally</em> clean home.</h1>
+      <p class="lede">Nicole's Natural Cleaning has been serving Spruce Grove and the Edmonton area since 2011. We clean with natural products to keep families and their pets safe from chemicals.</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="tel:+17802981650">Call (780) 298-1650</a>
+        <a class="btn btn-line" href="#services">Our services</a>
+      </div>
+      <div class="supplies"><i></i>We supply all cleaning supplies</div>
+    </div>
+    <div class="collage rv">
+      <div class="c-main"><img src="images/bathroom-modern.jpg" alt="Bright, freshly cleaned bathroom with a freestanding tub" fetchpriority="high"></div>
+      <div class="c-second"><img src="images/bathroom-cream.jpg" alt="Spotless bathroom with mirror, vanity and tub"></div>
+      <div class="badge">
+        <svg viewBox="0 0 150 150" aria-hidden="true"><defs><path id="circ" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text font-family="Figtree" font-size="11.5" font-weight="700" letter-spacing="3.4" fill="#1E2922"><textPath href="#circ">NATURAL PRODUCTS · SAFE FOR PETS · </textPath></text></svg>
+        <b>2011<small>Serving since</small></b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="story-grid rv">
+      <div class="eyebrow">Welcome, to our story</div>
+      <p class="story-text">We are passionate about <em>healthy living</em> and using natural products to clean homes and keep families and their pets safe from chemicals.
+        <span>We want to transform your home and make it beautiful.</span>
+      </p>
+    </div>
+    <figure class="story-img rv">
+      <img src="images/natural-ingredients.jpg" alt="Lemon, vinegar, baking soda and brushes laid out for natural cleaning" loading="lazy">
+      <figcaption><i></i>We supply all cleaning supplies</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">Home and office service</div>
+        <h2>Next level service, <em>for every kind of space.</em></h2>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <ul class="svc-list rv" id="svcList">
+        <li class="on" data-img="0"><span class="n">01</span><div><h3>One time / Regular cleaning</h3><p>Biweekly, monthly, bimonthly.</p></div></li>
+        <li data-img="1"><span class="n">02</span><div><h3>Move in / Move out cleaning</h3></div></li>
+        <li data-img="2"><span class="n">03</span><div><h3>Vacation rental properties</h3></div></li>
+        <li data-img="3"><span class="n">04</span><div><h3>Office cleaning</h3><p>Floors, bathrooms, garbage removal and vacuuming.</p></div></li>
+      </ul>
+      <div class="svc-photo rv" id="svcPhoto">
+        <img class="on" src="images/home-vacuum.jpg" alt="Cleaner vacuuming a bright living room" loading="lazy">
+        <img src="images/kitchen.jpg" alt="Clean white kitchen with granite island" loading="lazy">
+        <img src="images/living-room.jpg" alt="Tidy living room with fireplace" loading="lazy">
+        <img src="images/bedroom.jpg" alt="Neatly made bed in a clean bedroom" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="deep" id="deep-clean">
+  <div class="wrap">
+    <div class="deep-top rv">
+      <div>
+        <div class="eyebrow">What's included</div>
+        <h2>Standard deep cleaning, <em>room by room.</em></h2>
+      </div>
+      <p></p>
+    </div>
+
+    <div class="tabs rv" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-p="p0">Kitchen</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p1">Living areas &amp; bedrooms</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p2">Bathrooms</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p3">Hallway &amp; mudroom</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p4">Extras</button>
+    </div>
+
+    <div class="panel on" id="p0">
+      <figure><img src="images/kitchen.jpg" alt="Clean kitchen" loading="lazy"></figure>
+      <div class="panel-body">
+        <h3>Kitchen</h3>
+        <ul class="ticks">
+          <li>Wash all cabinets</li>
+          <li>Wipe down all appliances (inside of microwave only)</li>
+          <li>Wipe counters and backsplash</li>
+          <li>Sink</li>
+          <li>Light fixtures</li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel" id="p1">
+      <figure><img src="images/bedroom.jpg" alt="Clean bedroom" loading="lazy"></figure>
+      <div class="panel-body">
+        <h3>Living areas, including bedrooms</h3><p class="sub">Dust anything dustable.</p>
+        <ul class="ticks">
+          <li>Baseboards</li><li>Window sills</li><li>Fans</li><li>Doors</li>
+          <li>Pictures and mirrors</li><li>Headboards and footboards</li><li>Dressers</li><li>Vacuum</li><li>Make beds</li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel" id="p2">
+      <figure><img src="images/bathroom-cream.jpg" alt="Clean bathroom" loading="lazy"></figure>
+      <div class="panel-body">
+        <h3>Bathrooms</h3><p class="sub">Top to bottom cleaning.</p>
+        <ul class="ticks">
+          <li>Spot wash walls</li><li>Mirrors</li><li>Counters and vanity</li><li>Toilet</li>
+          <li>Shower, inside and out</li><li>Tubs</li><li>All chrome and light fixtures</li><li>Wash floors</li><li>Disinfect everything</li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel" id="p3">
+      <figure><img src="images/living-room.jpg" alt="Clean hallway and living space" loading="lazy"></figure>
+      <div class="panel-body">
+        <h3>Hallway areas / Mudroom</h3>
+        <ul class="ticks">
+          <li>Wash banisters</li><li>Wash doors</li><li>Wash shelves</li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel" id="p4">
+      <figure><img src="images/bathroom-modern.jpg" alt="Spotless bathroom with large window" loading="lazy"></figure>
+      <div class="panel-body">
+        <h3>Extras</h3>
+        <ul class="ticks">
+          <li>Blinds</li><li>Walls</li><li>Fridge</li><li>Oven</li><li>Inside windows</li>
+        </ul>
+        <p class="trash">Every visit, we also empty garbage cans and recycling and replace them with new garbage bags.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="move">
+  <div class="wrap move-grid">
+    <div class="rv">
+      <div class="eyebrow">Move in / Move out clean</div>
+      <h2>Leave it, or arrive to it, <em>spotless.</em></h2>
+      <div class="from"><small>Starts from</small>$250</div>
+    </div>
+    <ul class="move-list rv">
+      <li><b>Windows</b></li>
+      <li><b>Spot wash</b>walls</li>
+      <li><b>All appliances</b>inside and out, and we pull them out to clean behind</li>
+      <li><b>All lights</b>that are accessible</li>
+      <li><b>Scrub</b>floors</li>
+      <li><b>Vacuum</b>carpets</li>
+      <li><b>Clean inside</b>closets and kitchen cabinets and drawers, inside and out</li>
+      <li><b>Wash</b>all doors and closets</li>
+    </ul>
+  </div>
+</section>
+
+<section class="prices" id="prices">
+  <div class="wrap price-grid">
+    <div class="rv">
+      <div class="eyebrow">Cleaning prices</div>
+      <h2>Straightforward <em>pricing.</em></h2>
+      <div class="notes">
+        <p>The first initial cleaning takes the longest, as we don't know the condition of the home. We can offer a flat rate after the first couple of cleans, on weekly and biweekly service only.</p>
+        <p>The flat rate is based on the same cleaning process. If the client wants extra time, the flat rate changes.</p>
+        <p>Prices are subject to increase without notice.</p>
+      </div>
+    </div>
+    <div class="receipt rv">
+      <h3>Nicole's Natural Cleaning</h3>
+      <div class="tag">Prices start from</div>
+      <div class="row"><div class="l"><b>Weekly / Biweekly</b><span>Two cleaners</span></div><div class="r two"><small>from</small>$135 / hr</div></div>
+      <div class="row"><div class="l"><b>Weekly / Biweekly</b><span>Three cleaners</span></div><div class="r two"><small>from</small>$160 / hr</div></div>
+      <div class="row"><div class="l"><b>Move out / Move in</b></div><div class="r"><small>from</small>$250</div></div>
+      <div class="row"><div class="l"><b>Senior cleaning</b></div><div class="r"><small>from</small>$100</div></div>
+      <div class="row"><div class="l"><b>Office cleaning</b><span>Small travel fee over 25 kms</span></div><div class="r two"><small>from</small>$125 / hr</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="agree" id="agreement">
+  <div class="wrap agree-grid">
+    <div class="rv">
+      <div class="eyebrow">Service agreement</div>
+      <h2>Residential &amp; Office Cleaning Service Agreement</h2>
+      <p class="i">Welcome to Nicole's Natural Cleaning. The policies listed here serve to protect you, your pets, your belongings and our staff. When you agree to the initial quote, you agree to these policies.</p>
+    </div>
+    <div class="rv">
+      <details open>
+        <summary>Cancellations</summary>
+        <p>Please give at least 24 hours notice so we can fill your spot. If it is less, there will be a $95 charge.</p>
+      </details>
+      <details>
+        <summary>Schedule</summary>
+        <p>Please try to be consistent with appointment times, as we may not be able to accommodate changes.</p>
+      </details>
+      <details>
+        <summary>Access</summary>
+        <p>Please ensure all access routes are safe and clear to pass, including driveways and walkways.</p>
+      </details>
+      <details>
+        <summary>Locked out</summary>
+        <p>If we are locked out on a scheduled cleaning day, there will be a $95 charge to cover travel and our time.</p>
+      </details>
+      <details>
+        <summary>No refunds</summary>
+        <p>We are professional and want to ensure everything gets done in a meticulous and detailed fashion. We are human and make mistakes, or Murphy's law takes over at times, but we try to be careful with your belongings. If there are any issues with the cleaning or you are not happy with the service, please let our staff know and we will try to help you out as much as we can.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in rv">
+    <div class="eyebrow">Contact us</div>
+    <h2>Let's make your home <em>beautiful.</em></h2>
+    <p class="area">Serving Spruce Grove and the Edmonton areas since 2011.</p>
+    <a class="phone" href="tel:+17802981650">(780) 298-1650</a>
+    <p class="small">Small travel fee over 25 kms</p>
+  </div>
+  <footer>
+    <div class="wrap foot">
+      <span>Copyright &copy; 2026 Nicole's Natural Cleaning. All Rights Reserved.</span>
+      <span><a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Design by Cleaning Digital.</a></span>
+    </div>
+  </footer>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.querySelector('.menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open')});
+
+  var items=document.querySelectorAll('#svcList li'),imgs=document.querySelectorAll('#svcPhoto img');
+  function show(i){items.forEach(function(l,k){l.classList.toggle('on',k==i)});imgs.forEach(function(im,k){im.classList.toggle('on',k==i)})}
+  items.forEach(function(li){li.addEventListener('mouseenter',function(){show(+li.dataset.img)});li.addEventListener('click',function(){show(+li.dataset.img)})});
+
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id===t.dataset.p)});
+  })});
+
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    rv.forEach(function(el){io.observe(el)});
+  }else{rv.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
